@@ -1,20 +1,97 @@
-import type { Config } from "tailwindcss";
+import type {Config} from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    darkMode: 'selector',
+    content: [
+        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                'text': {
+                    50: '#e5f1ff',
+                    100: '#cce4ff',
+                    200: '#99c9ff',
+                    300: '#66adff',
+                    400: '#3392ff',
+                    500: '#0077ff',
+                    600: '#005fcc',
+                    700: '#004799',
+                    800: '#003066',
+                    900: '#001833',
+                    950: '#000c1a',
+                },
+                'background': {
+                    50: '#f2f2f2',
+                    100: '#e6e6e6',
+                    200: '#cccccc',
+                    300: '#b3b3b3',
+                    400: '#999999',
+                    500: '#808080',
+                    600: '#666666',
+                    700: '#4d4d4d',
+                    800: '#333333',
+                    900: '#1a1a1a',
+                    950: '#0d0d0d',
+                },
+                'primary': {
+                    50: '#e5fff0',
+                    100: '#ccffe0',
+                    200: '#99ffc2',
+                    300: '#66ffa3',
+                    400: '#33ff85',
+                    500: '#00ff66',
+                    600: '#00cc52',
+                    700: '#00993d',
+                    800: '#006629',
+                    900: '#003314',
+                    950: '#001a0a',
+                },
+                'secondary': {
+                    50: '#f2ffe5',
+                    100: '#e5ffcc',
+                    200: '#caff99',
+                    300: '#b0ff66',
+                    400: '#96ff33',
+                    500: '#7bff00',
+                    600: '#63cc00',
+                    700: '#4a9900',
+                    800: '#316600',
+                    900: '#193300',
+                    950: '#0c1a00',
+                },
+                'accent': {
+                    50: '#e5f1ff',
+                    100: '#cce3ff',
+                    200: '#99c7ff',
+                    300: '#66abff',
+                    400: '#338fff',
+                    500: '#0073ff',
+                    600: '#005ccc',
+                    700: '#004599',
+                    800: '#002e66',
+                    900: '#001733',
+                    950: '#000b1a',
+                },
+                'error': {
+                    50: '#fee7e7',
+                    100: '#fccfcf',
+                    200: '#f99f9f',
+                    300: '#f76e6e',
+                    400: '#f43e3e',
+                    500: '#f10e0e',
+                    600: '#c10b0b',
+                    700: '#910808',
+                    800: '#600606',
+                    900: '#300303',
+                    950: '#180101',
+                }
+            },
+
+        },
     },
-  },
-  plugins: [],
+    plugins: [],
 };
 export default config;
