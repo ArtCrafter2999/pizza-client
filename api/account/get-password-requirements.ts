@@ -1,16 +1,13 @@
-import {apiEndpoint} from "@/api/defaults";
 import {defaultRequirements, PasswordRequirements} from "@/api/account/models/password-requirements";
+import {get} from "@/api/defaults/get";
 
-const url = apiEndpoint+"/passwordRequirements"
-const options: RequestInit = {
-    method: "GET",
-    headers: {
-        accept: "application/json",
-    }
-}
+const url = "/Account/passwordRequirements"
 
 export async function getPasswordRequirements(): Promise<PasswordRequirements> {
-    return await fetch(url, options)
-                    .then(res => res.json())
-                    .catch(() => Promise.resolve(defaultRequirements));
+    try {
+        return await get(url);
+    } catch (e) {
+        console.error(e);
+        return defaultRequirements;
+    }
 }

@@ -1,17 +1,9 @@
-import {apiEndpoint} from "@/api/defaults";
 import {LoginModel} from "@/api/account/models/login-model";
+import {post} from "@/api/defaults/post";
+import {generateQuery} from "@/api/generate-query";
 
-const url = apiEndpoint+"/login"
-const options: RequestInit = {
-    method: "POST",
-    headers: {
-        contentType: "application/json",
-    }
-}
+const url = "/Account/login"
 
-export async function login(model: LoginModel): Promise<boolean> {
-    const urlWithQuery = url + "?useCookies=true"
-    return await fetch(urlWithQuery, {body: JSON.stringify(model), ...options})
-        .then(res => res.ok)
-        .catch(() => false);
+export function login(model: LoginModel): Promise<void> {
+    return post(url + generateQuery({useCookies: true}), model);
 }

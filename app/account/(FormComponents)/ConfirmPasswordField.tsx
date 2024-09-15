@@ -1,7 +1,8 @@
+'use client'
 import React, {useLayoutEffect, useMemo, useState} from 'react';
-import AccountField from "@/app/account/FormComponents/AccountField";
-import RuleContainer from "@/app/account/FormComponents/RuleContainer";
-import ValidationRule from "@/app/account/FormComponents/ValidationRule";
+import AccountField from "@/app/account/(FormComponents)/AccountField";
+import RuleContainer from "@/app/account/(FormComponents)/RuleContainer";
+import ValidationRule from "@/app/account/(FormComponents)/ValidationRule";
 
 type Props = {
     password: string

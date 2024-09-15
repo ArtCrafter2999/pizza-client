@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn({["dark"]: isDark}, "dark:bg-background-900 bg-background-50 dark:text-white")}>
-          <input type={"checkbox"} className="absolute bottom-0 right-0" checked={isDark} onChange={() => setDark(!isDark)}/>
+          <input type={"checkbox"} className="fixed bottom-0 right-0" checked={isDark} onChange={() => setDark(!isDark)}/>
         {children}
       </body>
     </html>

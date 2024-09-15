@@ -1,12 +1,11 @@
 'use client'
-import React, {useCallback, useEffect, useLayoutEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {defaultRequirements, PasswordRequirements, PasswordSatisfied} from "@/api/account/models/password-requirements";
 import useAsyncEffect from "use-async-effect";
 import {getPasswordRequirements} from "@/api/account/get-password-requirements";
-import AccountField from "@/app/account/FormComponents/AccountField";
-import ValidationRule from "@/app/account/FormComponents/ValidationRule";
-import cn from "classnames";
-import RuleContainer from "@/app/account/FormComponents/RuleContainer";
+import AccountField from "@/app/account/(FormComponents)/AccountField";
+import ValidationRule from "@/app/account/(FormComponents)/ValidationRule";
+import RuleContainer from "@/app/account/(FormComponents)/RuleContainer";
 
 const digit = /[0-9]/
 const lowercase = /[a-z]/

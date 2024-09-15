@@ -1,12 +1,10 @@
 'use client'
 import React, {useState} from 'react';
-import HeaderTitle from "@/app/account/FormComponents/HeaderTitle";
-import AccountField from "@/app/account/FormComponents/AccountField";
-import FormButton from "@/app/account/FormComponents/FormButton";
+import HeaderTitle from "@/app/account/(FormComponents)/HeaderTitle";
+import FormButton from "@/app/account/(FormComponents)/FormButton";
 import {forgotPassword} from "@/api/account/forgot-password";
-import TextLink from "@/app/account/FormComponents/TextLink";
 import Link from "next/link";
-import EmailField from "@/app/account/FormComponents/EmailField";
+import EmailField from "@/app/account/(FormComponents)/EmailField";
 
 const ForgotPasswordPage = () => {
     const [email, setEmail] = useState<string>("");

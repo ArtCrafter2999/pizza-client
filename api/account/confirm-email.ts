@@ -1,16 +1,8 @@
-import {apiEndpoint} from "@/api/defaults";
 import {ConfirmEmailModel} from "@/api/account/models/confirm-email-model";
+import {post} from "@/api/defaults/post";
 
-const url = apiEndpoint+"/confirm-email";
-const options: RequestInit = {
-    method: "POST",
-    headers: {
-        contentType: "application/json",
-    }
-}
+const url = "/Account/confirmEmail";
 
-export async function confirmEmail(model: ConfirmEmailModel): Promise<boolean> {
-    return await fetch(url, {body: JSON.stringify(model), ...options})
-        .then(res => res.ok)
-        .catch(() => false);
+export function confirmEmail(model: ConfirmEmailModel): Promise<void> {
+    return post(url, model)
 }

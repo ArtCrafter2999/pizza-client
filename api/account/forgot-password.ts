@@ -1,16 +1,7 @@
-import {apiEndpoint} from "@/api/defaults";
-import {LoginModel} from "@/api/account/models/login-model";
+import {post} from "@/api/defaults/post";
 
-const url = apiEndpoint+"/forgotPassword";
-const options: RequestInit = {
-    method: "POST",
-    headers: {
-        contentType: "application/json",
-    }
-}
+const url = "/Account/forgotPassword";
 
-export async function forgotPassword(email: string): Promise<boolean> {
-    return await fetch(url, {body: JSON.stringify({email}), ...options})
-        .then(res => res.ok)
-        .catch(() => false);
+export function forgotPassword(email: string): Promise<void> {
+    return post(url, {email})
 }

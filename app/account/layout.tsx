@@ -1,4 +1,5 @@
 import React from "react";
+import SequentialFocus from "@/app/account/(FormComponents)/SequentialFocus";
 
 export default function Layout({
                                    children,
@@ -10,7 +11,9 @@ export default function Layout({
             <div className="dark:bg-background-800 bg-white border dark:border-transparent
                             border-secondary-600 rounded-xl h-fit dark:no-shadow
                             w-80 p-3">
-                {children}
+                <SequentialFocus>
+                    {children}
+                </SequentialFocus>
             </div>
         </main>
     );
